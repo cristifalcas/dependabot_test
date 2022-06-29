@@ -1,0 +1,25 @@
+[package]
+name = "rust1_ann"
+version = "0.0.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bincode = "1.3.3"
+blas-src = { version = "0.8", features = ["openblas"] }
+bytes = "1.1.0"
+clap = { version = "3.1.18", features = ["derive"] }
+eyre = "0.6.6"
+futures = "0.3.19"
+linfa = { git = "https://github.com/rust-ml/linfa", rev="2a530612013c061781975806fb58fd42504cb9eb" }
+linfa-clustering = { git = "https://github.com/rust-ml/linfa", rev="2a530612013c061781975806fb58fd42504cb9eb" }
+ndarray = { version = "0.15.0", features = ["rayon", "blas", "serde"] }
+ndarray-stats = "0.5"
+openblas-src = { version = "0.10", features = ["cblas", "system"] }
+rust1_core = { path = "../core" }
+rust1_gcp = { path = "../gcp" }
+rand = "0.8.4"
+serde = { version = "1.0.136", features = ["derive"] }
+tfrecord = { version = "0.13.0", features = ["async"] }
+tokio = { version = "1.17.0", features = ["full"] }
+zstd = "0.11.1"

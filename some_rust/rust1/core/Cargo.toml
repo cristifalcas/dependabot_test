@@ -1,0 +1,53 @@
+[package]
+name = "rust1_core"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+ahash = "=0.7.6"
+async-trait = "=0.1.52"
+byteorder = "=1.4.3"
+backtrace = "=0.3.64"
+bytes = "=1.1.0"
+chrono = "=0.4.19"
+color-eyre = "=0.6.1"
+enum-iterator = "=0.7.0"
+eyre = "=0.6.7"
+farmhash = "=1.1.5"
+fastvlq = "=1.1.1"
+futures = "=0.3.21"
+ginepro = "=0.3.0"
+google-api-proto = { version = "1.21.0", features = ["google-bigtable-v2", "google-bigtable-admin-v2"] }
+itertools = "=0.10.3"
+num_cpus = "=1.13.1"
+once_cell = "=1.10.0"
+rust1_common = { path = "../common" }
+rust1_gcp = { path = "../gcp" }
+rust1_tantivy = { path = "../tantivy" }
+parse-display = "=0.5.5"
+prometheus_exporter = "=0.8.4"
+prost = "=0.9.0"
+rand = "=0.8.5"
+rdkafka = "=0.28.0"
+reqwest = { version = "=0.11.10", features = ["json", "rustls-tls-native-roots"], default-features = false }
+serde = { version = "=1.0.136", features = ["derive"] }
+serde_json = "=1.0.79"
+tantivy = { git = "https://github.com/quickwit-inc/tantivy", rev = "46d5de920dd1ac86fa7a74baa0debd933bcb6574", default-features = false }
+tanuki-protos = { git = "ssh://git@github.com/etsy/tanuki.git", rev = "df3492ffa108cfa04f470efdcf00f06015235987" }
+thiserror = "=1.0.30"
+tinyvec = "=1.5.1"
+tokio = { version = "=1.17.0", features = ["full"] }
+tonic = { version = "=0.6.2", features = ["tls", "transport"] }
+tonic-health = "=0.5.0"
+tonic-reflection = "=0.3.0"
+tower = "=0.4.12"
+tracing = "=0.1.32"
+tracing-stackdriver = { git = "https://github.com/yottabytt/tracing-stackdriver", rev = "64a95c2a32978aedc67b2c48180c9585575e063a" } # https://github.com/NAlexPear/tracing-stackdriver/pull/5
+tracing-subscriber = "=0.3.9"
+
+[build-dependencies]
+prost-build = "=0.9.0"
+tonic-build = "=0.6.2"
+
+[dev-dependencies]
+testcontainers = { git = "https://github.com/testcontainers/testcontainers-rs", rev = "a33c9fea5aaf0a148c1f6882b8901f8a194153b8" }

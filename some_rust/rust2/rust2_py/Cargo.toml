@@ -1,0 +1,35 @@
+[package]
+name = "rust2_py"
+version = "0.11.1"
+edition = "2021"
+authors = ["Etsy"]
+
+[lib]
+name = "rust2_py"
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.14"
+hashbrown = "0.11.2"
+float-ord = "0.3.2"
+rand = "0.8.0"
+rand_xorshift = "0.3.0"
+pyo3 = "0.14.2"
+dict_derive = "0.4.0"
+
+[dependencies.rust2_core]
+path = "../rust2_core"
+
+[dependencies.rust2_processor]
+path = "../rust2_processor"
+
+# The following is a workaround for:
+# https://pyo3.rs/v0.14.2/faq.html#i-cant-run-cargo-test-im-having-linker-issues-like-symbol-not-found-or-undefined-reference-to-_pyexc_systemerror
+[features]
+extension-module = ["pyo3/extension-module"]
+default = ["extension-module"]
+
+[profile.release]
+lto = true

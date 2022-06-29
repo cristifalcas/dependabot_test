@@ -1,0 +1,66 @@
+# we don't want to have dependabot opening PRs for us
+version: 2
+updates:
+- package-ecosystem: "gomod"
+  directory: "/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "cargo"
+  directory: "/some_rust/rust1/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "cargo"
+  directory: "/some_rust/rust2/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "npm"
+  directory: "/apps/tireui/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "npm"
+  directory: "/apps/switchb/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "npm"
+  directory: "/other/prettier/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "npm"
+  directory: "/apps/cucu/githubbot/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "pip"
+  directory: "/apps/forpip"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"
+- package-ecosystem: "pip"
+  directory: "/other/py_black/"
+  open-pull-requests-limit: 0
+  schedule:
+    interval: "daily"
+    time: "17:35"
+    timezone: "Europe/Bucharest"

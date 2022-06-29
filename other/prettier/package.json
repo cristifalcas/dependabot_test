@@ -1,0 +1,9 @@
+{
+  "name": "prettier",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "prettier": "^2.6.0"
+  }
+}

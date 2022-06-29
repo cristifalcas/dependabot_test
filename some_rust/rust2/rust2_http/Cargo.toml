@@ -1,0 +1,23 @@
+[package]
+name = "rust2_http"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "rust2-serve"
+path = "src/bin/serve.rs"
+bench = false
+
+[dependencies]
+tokio = { version = "1.12.0", features = ["full"] }
+warp = "0.3.2"
+log = "0.4.14"
+serde = { version = "1.0.130", features = ["rc", "derive"] }
+serde_json = "1.0.71"
+clap = "2.33.3"
+hashbrown = { version = "0.11.2", features = ["rayon"] }
+
+[dependencies.rust2_core]
+path = "../rust2_core"

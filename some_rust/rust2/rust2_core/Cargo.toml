@@ -1,0 +1,60 @@
+[package]
+name = "rust2_core"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rust2_core"
+src = "src/lib.rs"
+bench = false
+
+
+
+[[bin]]
+name = "rust2-graph-inference"
+path = "src/bin/graph_inference.rs"
+bench = false
+
+[dependencies]
+log = "0.4.14"
+once_cell = "=1.10.0"
+prometheus_exporter = "0.8.4"
+hashbrown = { version = "0.11.2", features = ["rayon"] }
+float-ord = "0.3.2"
+rand_xorshift = "0.3.0"
+rand_distr = "0.4.0"
+rayon = "1.5.1"
+tokio = { version = "1.12.0", features = ["full"] }
+warp = "0.3.2"
+serde = { version = "1.0.130", features = ["rc", "derive"] }
+serde_json = "1.0.71"
+glob = "0.3.0"
+chrono = "0.4.19"
+itertools = "0.10.1"
+clap = "2.33.3"
+fast-float = "0.2.0"
+lexical-core = "0.8.2"
+ahash = "0.7.6"
+lasso = { git = "https://github.com/Kixiron/lasso",rev = "d1747816ea0b06c44f6f755e1390f34ca5fb5ab5", features = [
+        "ahasher",
+        "inline-more",
+        "serialize"]}
+thiserror = "1.0.30"
+indicatif = "0.16.2"
+bincode = "1.3.3"
+
+[dependencies.rand]
+version = "0.8.0"
+features = ["alloc"]
+
+[dev-dependencies]
+criterion = "0.3.5"
+tempfile = "3.2.0"
+
+[[bench]]
+name = "graph"
+harness = false
+
+[profile.release]
+lto = true

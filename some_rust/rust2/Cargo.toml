@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "rust2_core",
+    "rust2_grpc",
+    "rust2_http",
+    "rust2_processor",
+    "rust2_py",
+]

@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "common",
+    "core",
+    "gcp",
+    "ann",
+    "tantivy",
+]
+
+[profile.dev.package.backtrace]
+# https://github.com/yaahc/color-eyre#improving-perf-on-debug-builds
+opt-level = 3
